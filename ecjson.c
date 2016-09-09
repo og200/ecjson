@@ -412,7 +412,7 @@ decode_number(DecoderContext *ctx)
         return NULL;
 
     if (is_float) {
-        object = PyFloat_FromString(str);
+        object = PyFloat_FromString(str,NULL);
     } else {
         object = PyInt_FromString(PyString_AS_STRING(str), NULL, 10);
     }
