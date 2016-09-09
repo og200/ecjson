@@ -65,6 +65,10 @@
 #include <ctype.h>
 #include <math.h>
 
+#if PY_MAJOR_VERSION >= 3
+#define IS_PY3K
+#endif
+
 #if (PY_VERSION_HEX < 0x02050000)
 typedef int Py_ssize_t;
 #endif
@@ -408,7 +412,7 @@ decode_number(DecoderContext *ctx)
         return NULL;
 
     if (is_float) {
-        object = PyFloat_FromString(str, NULL);
+        object = PyFloat_FromString(str);
     } else {
         object = PyInt_FromString(PyString_AS_STRING(str), NULL, 10);
     }
