@@ -1375,6 +1375,11 @@ PyDoc_STRVAR(module_doc,
 
 /* Initialization function for the module (*must* be called initecjson) */
 
+
+#ifndef PyMODINIT_FUNC	/* declarations for DLL import/export */
+#define PyMODINIT_FUNC void
+#endif
+
 PyMODINIT_FUNC
 initecjson(void)
 {
