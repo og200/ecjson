@@ -57,6 +57,8 @@
  * Fixed a rare, but reproducible segmentation fault when decoding specially
  * crafted unicode strings. Bug reported by: Liu Cougar - China
  *
+ * 2016-09-16: Added _as_javascript extension to call that instead
+ *
  */
 
 #include <Python.h>
