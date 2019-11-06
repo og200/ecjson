@@ -60,3 +60,8 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+.idea/ecjson.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/inspectionProfiles/profiles_settings.xml
